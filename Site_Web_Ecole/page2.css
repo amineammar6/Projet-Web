@@ -1,0 +1,397 @@
+body {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);         
+    }
+    a {
+    text-decoration: none;
+    color: #1a1e21;
+}
+    /*****************************
+      NavBar
+    ******************************/
+header nav {
+    background: #fff;
+    box-shadow: 0px 0px 5px #4444;
+    font-family: 'Poppins', sans-serif;
+
+}
+nav ul li {
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+}
+nav ul li a:hover  {
+    text-decoration: underline rgb(10, 156, 10);
+    
+}
+/************************ logo ********************/
+
+#logo {
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+}
+#logo a{
+    font-size: 25px;
+    text-decoration: none;
+    color: #9999;
+    font: 700 2em/1 "Oswald",sans-serif ;
+    background: url('noir.jpg');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: anim 80s linear infinite;
+}
+@-webkit-keyframes anim{
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+        
+    }
+}
+#logo {
+    display: flex;  
+    flex-direction: row;
+    align-items: center;
+    text-transform: uppercase;
+}
+#logo img {
+    width: 80px;
+    height: 55px;
+    margin-left: 0;
+}
+
+#logo a span {
+    font-family: 'BallparkWeiner', serif;
+    font-size: 20px;
+    font-weight: normal;
+    padding-left: 10px;
+    text-transform: uppercase;   
+    color: rgb(255, 184, 5);         
+}        
+.sous{
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 800;
+}
+
+/***************************************************
+                hero-section
+****************************************************/
+.hero-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 95vh;
+  padding: 0 15px;
+  width: 100%;
+  background-image: linear-gradient(-20deg, #dcb0ed 0%, #99c99c 100%);  height: 100vh!important;
+
+  margin: 0 auto;
+}
+
+.hero-section .hero {
+  max-width: 50%;
+  color: black;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family:  "Pacifico", cursive;;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: black;
+  font-family: "Libre Baskerville", serif;
+
+}
+
+.hero-section .img img {
+  width: 617px;
+  margin-bottom: 30%;
+  border-radius: 10px;
+  box-shadow:5px 5px 5px 5px ;
+}
+
+.hero-section .buttons {
+  margin-top: 40px;
+}
+.hero-section .buttons a {
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+  display: inline-block;
+}
+.buttons .learn {
+  background-color: #47b2e4;
+}
+@media screen and (max-width: 1023px) {
+ .buttons {
+    display: none;
+  }
+
+  .hero-section .hero {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-section img {
+    display: none;
+  }
+}
+
+
+
+#containe{
+    text-align: center;
+    height: 400px;
+
+}
+#containe .our-servic{
+    text-align: center;
+    margin-top: 10px;
+    width: 40%;
+    display: inline-block;
+}
+#containe .our-servic h3{
+    text-transform: capitalize;
+}
+#containe .our-servic p{
+    margin: 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+} 
+.our-servic .one{
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(212, 212, 224);
+    width: 130px;
+    height: 2px;
+}
+#containe .box{
+    height: 400px;
+    display: flex;
+}
+#containe .box .box-contant{
+    background-color: white;
+    width: 35%;
+    margin: 10px;
+    height: 310px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    box-shadow:5px 5px 5px 2px rgba(78, 77, 77, 0.137);
+    cursor: pointer;
+}
+#containe .box .box-contant:hover{
+    background-color: rgba(233, 233, 233, 0.815);
+    box-shadow:10px 10px 10px 2px rgba(78, 77, 77, 0.137);
+    transition: 0.3s;
+}
+#containe .box .box-contant img{
+    margin: 10px;
+    width: 18%;
+}
+#containe .box .box-contant p{
+    font-family: sans-serif;
+    font-size: 14px;
+    margin: 15px;
+    color: rgb(99, 93, 93);
+}
+@media (max-width: 1024px) {
+    #containe .box .box-contant {
+              padding-left: 0;
+              padding-right: 0;
+            }
+        }
+@media (max-width: 992px) {
+        #containe {
+          padding-top: 30px;
+          height: 880px;
+    }
+    #containe .box .box-contant {
+      padding-bottom: 30px;
+      height: 700px;
+    }
+}
+
+#titre{
+    text-align: center;
+    font-family: "Pacifico", cursive ;
+    font-weight: 600;
+    font-style: italic;
+    color: #29b6f6;
+    margin-bottom: 40px;
+}
+/************************************************
+                   regeloment interieur
+************************************************/        
+
+.contain{
+    margin: 50px ;
+    margin-top: 70px;
+}
+p{
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 14px;
+    opacity: 0.9;
+}
+.timeline{
+    position: relative;
+    padding-left: 4rem;
+    color: #fff;
+}
+.timeline::before{
+    content: "";
+    width: 4px;
+    height: 99%;
+    position: absolute;
+    background-color: #27293d;
+    left: 0;
+    top: 15px;
+}
+.timeline .timeline-box{
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+.timeline .timeline-box .icon{
+    position: absolute;
+    left: -88px;
+    top: 4px;
+    width: 48px;
+    height: 48px;
+    background-color: #4f537b;
+    font-size: 3rem;
+    text-align: center;
+}
+.timeline .timeline-box .icon i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.timeline .timeline-box .timeline-body{
+    background-color: #27293d;
+    border-radius: 6px;
+    padding: 20px 18px 15px 20px;
+    box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.timeline .timeline-box .timeline-body:hover{
+    box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.6);
+}
+.timeline .timeline-box .timeline-body::before{
+    content: "";
+    background-color: inherit;
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    left: -10px;
+    transform: rotate(45deg);
+    border-radius: 0 0 0 3px;
+}
+.timeline .timeline-box .timeline-body .header{
+    margin-bottom: 1.2rem;
+}
+.timeline .timeline-box .timeline-body .header .badge{
+    background-color: #4f537b;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.timeline .timeline-box .timeline-body .time{
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.4;
+    margin-top: 16px;
+    font-size: 11px;
+}
+#primary .badge, #primary .icon{
+    background-color: #42a5f5;
+}
+#success .badge, #success .icon{
+    background-color: #66bb6a;
+}
+#danger .badge, #danger .icon{
+    background-color: #ec407a;
+}
+#warning .badge, #warning .icon{
+    background-color: #ffa726;
+}
+#info .badge, #info .icon{
+    background-color: #29b6f6;
+}
+
+/************************
+  Niveaux de formation
+***********************/
+.contai{
+    padding: 50px;
+}
+ .card{
+    border-radius: 4px;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    padding: 14px 80px 18px 36px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+.card h3{
+    font-weight: 600;
+    font-family: "Great Vibes", cursive;
+}
+.card p{
+    font-weight: 400;
+    font-family: "Nanum Myeongjo", serif  ;
+
+}
+.card img{
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    max-height: 120px;
+}  
+.card-1{
+    background-image: url(card.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80px;
+}       
+.card-2{
+    background-image: url(card2.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80px;
+}
+.card-3{
+    background-image: url(card3.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80px;
+}       
+@media(max-width: 990px){
+  .card{
+    margin: 20px;
+  }
+}
+        
+        
+        
+        
