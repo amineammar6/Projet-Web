@@ -4,7 +4,7 @@ import {Studio} from '../Studio';
 import {Shot, HERO_W} from '../Stage';
 import {LightSweep} from '../fx/LightSweep';
 import {Particles} from '../fx/Particles';
-import {camera, ramp, track} from '../anim';
+import {camera, ramp, track} from '../../lib/anim';
 import {C, F, FOCUS, HERO} from '../theme';
 
 export type Branding = {

@@ -6,7 +6,7 @@ import {Particles} from '../fx/Particles';
 import {Brackets, Dimension, ScanBar, ScanDefs, TechRing} from '../fx/Graphics';
 import {Schematic} from '../fx/Schematic';
 import {Chip, Kicker, Reveal, Rule, Sub, Title} from '../fx/Typo';
-import {camera, ramp, track} from '../anim';
+import {camera, ramp, track} from '../../lib/anim';
 import {FOCUS, HERO} from '../theme';
 
 const W_HERO = 1180;

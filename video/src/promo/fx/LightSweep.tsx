@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
-import {track} from '../anim';
+import {track} from '../../lib/anim';
 
 type Props = {start: number; duration: number; angle?: number; strength?: number};
 

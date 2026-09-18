@@ -1,6 +1,6 @@
 import React from 'react';
 import {C, F} from '../theme';
-import {ramp} from '../anim';
+import {ramp} from '../../lib/anim';
 
 /**
  * Working principle diagram — rollers occluding a flexible tube around the

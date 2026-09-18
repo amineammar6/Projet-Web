@@ -1,6 +1,6 @@
 import type React from 'react';
 import {Easing, interpolate} from 'remotion';
-import {EASE, EASE_SOFT} from './theme';
+import {EASE, EASE_SOFT} from '../promo/theme';
 
 const bez = (e: readonly number[]) => Easing.bezier(e[0], e[1], e[2], e[3]);
 
@@ -31,13 +31,6 @@ export const ramp = (frame: number, start: number, dur: number, soft = false) =>
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
-
-/** Fade a scene in at its head and out at its tail. */
-export const sceneFade = (frame: number, duration: number, cross: number) =>
-  Math.min(
-    interpolate(frame, [0, cross], [0, 1], {extrapolateRight: 'clamp', easing: bez(EASE_SOFT)}),
-    interpolate(frame, [duration - cross, duration], [1, 0], {extrapolateLeft: 'clamp', easing: bez(EASE_SOFT)}),
-  );
 
 /**
  * Camera transform for a centred product photo.

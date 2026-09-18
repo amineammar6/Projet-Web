@@ -1,6 +1,6 @@
 import React from 'react';
 import {C, F} from '../theme';
-import {ramp} from '../anim';
+import {ramp} from '../../lib/anim';
 
 /** Words rise into place behind a clipping edge — no flashy letter effects. */
 export const Reveal: React.FC<{

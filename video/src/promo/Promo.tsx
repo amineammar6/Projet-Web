@@ -8,7 +8,7 @@ import {S3Tech} from './scenes/S3Tech';
 import {S4Details} from './scenes/S4Details';
 import {S5Running} from './scenes/S5Running';
 import {S6Outro} from './scenes/S6Outro';
-import {sceneFade} from './anim';
+import {ramp} from '../lib/anim';
 import {C, CROSSFADE, F, SCENES} from './theme';
 
 export const promoSchema = z.object({
@@ -20,24 +20,27 @@ export const promoSchema = z.object({
 
 export type PromoProps = z.infer<typeof promoSchema>;
 
-/** Wraps a scene so consecutive scenes dissolve into each other. */
+/**
+ * Cross-dissolve by fading the incoming scene in over the outgoing one, which
+ * stays fully opaque for the whole overlap. Fading both at once lets the empty
+ * background show through at the midpoint and dips every cut towards white.
+ */
+const FadeIn: React.FC<{enabled: boolean; children: React.ReactNode}> = ({enabled, children}) => {
+  const frame = useCurrentFrame();
+  return (
+    <AbsoluteFill style={{opacity: enabled ? ramp(frame, 0, CROSSFADE, true) : 1}}>
+      {children}
+    </AbsoluteFill>
+  );
+};
+
 const Beat: React.FC<{
-  from: number; duration: number; fadeIn?: boolean; fadeOut?: boolean;
-  children: React.ReactNode;
-}> = ({from, duration, fadeIn = true, fadeOut = true, children}) => (
+  from: number; duration: number; fadeIn?: boolean; children: React.ReactNode;
+}> = ({from, duration, fadeIn = true, children}) => (
   <Sequence from={from} durationInFrames={duration} layout="none">
-    <Dissolve duration={duration} fadeIn={fadeIn} fadeOut={fadeOut}>{children}</Dissolve>
+    <FadeIn enabled={fadeIn}>{children}</FadeIn>
   </Sequence>
 );
-
-const Dissolve: React.FC<{
-  duration: number; fadeIn: boolean; fadeOut: boolean; children: React.ReactNode;
-}> = ({duration, fadeIn, fadeOut, children}) => {
-  const frame = useCurrentFrame();
-  const f = sceneFade(frame, duration, CROSSFADE);
-  const opacity = Math.min(fadeIn ? f : 1, fadeOut ? f : 1, 1);
-  return <AbsoluteFill style={{opacity: fadeIn || fadeOut ? opacity : 1}}>{children}</AbsoluteFill>;
-};
 
 export const Promo: React.FC<PromoProps> = ({brand, product, reference, website}) => (
   <AbsoluteFill style={{background: C.paper, fontFamily: F.sans}}>
@@ -58,7 +61,7 @@ export const Promo: React.FC<PromoProps> = ({brand, product, reference, website}
     <Beat {...SCENES.running}>
       <S5Running />
     </Beat>
-    <Beat {...SCENES.outro} fadeOut={false}>
+    <Beat {...SCENES.outro}>
       <S6Outro branding={{brand, product, reference, website}} />
     </Beat>
   </AbsoluteFill>

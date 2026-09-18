@@ -5,7 +5,7 @@ import {Shot, HERO_W} from '../Stage';
 import {LightSweep} from '../fx/LightSweep';
 import {Particles} from '../fx/Particles';
 import {Kicker, Reveal, Rule, Sub, Title} from '../fx/Typo';
-import {camera, ramp, track} from '../anim';
+import {camera, ramp, track} from '../../lib/anim';
 import {C, FOCUS, HERO} from '../theme';
 
 /**

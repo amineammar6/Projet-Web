@@ -27,14 +27,19 @@ export const EASE_SOFT = [0.4, 0.0, 0.2, 1.0] as const;
 export const FPS = 30;
 
 /** Scene cut sheet. Each scene overlaps the next by CROSSFADE frames. */
-export const CROSSFADE = 12;
+export const CROSSFADE = 14;
+/**
+ * Every scene must still be on screen while the next one fades in over it, so
+ * each duration runs CROSSFADE frames past the following scene's start. Leaving
+ * a gap here blinks the background through the cut.
+ */
 export const SCENES = {
   intro:   {from: 0,    duration: 220},
-  angles:  {from: 208,  duration: 296},
+  angles:  {from: 206,  duration: 300},
   tech:    {from: 492,  duration: 252},
-  details: {from: 732,  duration: 300},
-  running: {from: 1020, duration: 236},
-  outro:   {from: 1244, duration: 256},
+  details: {from: 730,  duration: 300},
+  running: {from: 1016, duration: 248},
+  outro:   {from: 1250, duration: 250},
 } as const;
 
 export const TOTAL =

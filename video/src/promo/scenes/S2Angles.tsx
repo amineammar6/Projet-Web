@@ -4,7 +4,7 @@ import {Studio} from '../Studio';
 import {Shot} from '../Stage';
 import {Particles} from '../fx/Particles';
 import {Kicker} from '../fx/Typo';
-import {ramp, track} from '../anim';
+import {ramp, track} from '../../lib/anim';
 import {C, F} from '../theme';
 
 /**

@@ -5,7 +5,7 @@ import {Shot} from '../Stage';
 import {Particles} from '../fx/Particles';
 import {Callout} from '../fx/Graphics';
 import {Kicker} from '../fx/Typo';
-import {camera, ramp, track} from '../anim';
+import {camera, ramp, track} from '../../lib/anim';
 import {FOCUS, HERO} from '../theme';
 
 const W_HERO = 1340;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {C, F} from '../theme';
-import {ramp, track} from '../anim';
+import {ramp, track} from '../../lib/anim';
 
 /** Concentric technical rings, drawn on then slowly counter-rotating. */
 export const TechRing: React.FC<{

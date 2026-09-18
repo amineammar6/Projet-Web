@@ -3,7 +3,7 @@ import {AbsoluteFill, Img, staticFile, useCurrentFrame, useVideoConfig} from 're
 import {Studio} from '../Studio';
 import {Particles} from '../fx/Particles';
 import {Kicker, Readout, Reveal, Rule, Sub, Title} from '../fx/Typo';
-import {ramp, track} from '../anim';
+import {ramp, track} from '../../lib/anim';
 import {C, F, ROTOR} from '../theme';
 
 const FRONT_W = 700;
